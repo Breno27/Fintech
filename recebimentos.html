@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recebimentos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/my.style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+        <div class="container-fluid p-2">
+            <a class="navbar-brand" href="./index.html">Fintech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./recebimentos.html">Recebimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gastos.html">Gastos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="px-3">Recebimentos</h1>
+    <table class="table table-recebimentos">
+        <thead>
+            <tr>
+                <th scope="col">Descrição</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Frequência</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Recebimento 1</td>
+                <td>R$ 100,00</td>
+                <td>Mensal</td>
+                <td>
+                    <button class="btn my-btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#editarModal">Editar</button>
+                    <a href="#" class="btn my-btn-danger">Excluir</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Recebimento 2</td>
+                <td>R$ 200,00</td>
+                <td>Anual</td>
+                <td>
+                    <button class="btn my-btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#editarModal">Editar</button>
+                    <a href="#" class="btn my-btn-danger">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Modal de Edição -->
+    <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header my-bg-primary">
+                    <h5 class="modal-title" id="editarModalLabel">Editar Recebimento</h5>
+                    <button type="button" class="btn-close my-btn-primary" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body my-bg-light">
+                    <!-- Formulário de edição -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control my-bg-light" id="nome" placeholder="Digite o nome"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="valor" class="form-label">Valor</label>
+                            <input type="text" class="form-control my-bg-light" id="valor" placeholder="Digite o valor"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="frequencia" class="form-label">Frequência</label>
+                            <select class="form-select my-bg-light" id="frequencia" required>
+                                <option value="">Selecione a frequência</option>
+                                <option value="anual">Anual</option>
+                                <option value="mensal">Mensal</option>
+                                <option value="quinzenal">Quinzenal</option>
+                                <option value="semanal">Semanal</option>
+                                <option value="diaria">Diária</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer my-bg-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn my-btn-primary">Salvar Alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="px-3">Cadastrar Recebimento</h2>
+    <div class="none px-3">
+        <form>
+            <div class="mb-3">
+                <label for="descricao" class="form-label">Descrição</label>
+                <input type="text" class="form-control my-bg-light" id="descricao" placeholder="Digite a descrição">
+            </div>
+            <div class="mb-3">
+                <label for="valor" class="form-label">Valor</label>
+                <input type="text" class="form-control my-bg-light" id="valor" placeholder="Digite o valor">
+            </div>
+            <button type="submit" class="btn my-btn-primary">Cadastrar</button>
+        </form>
+    </div>
+
+    <!-- inicio footer -->
+    <footer class="my-bg-primary fixed-bottom">
+        <div class="container p-4"></div>
+        <div class="text-center my-text-color-ligth">
+            © 2023 Copyright:
+            <a class="my-text-color-ligth" href="#">brenofernandes</a>
+        </div>
+    </footer>
+    <!-- fim footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

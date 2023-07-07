@@ -1,0 +1,92 @@
+* {
+    --my-green: #19a019;
+    --my-red: #b51630;
+    --my-light: #fffff0;
+    --my-primary: #30706f;
+    --my-soft: #fff8dc;
+    margin: 0;
+    padding: 0;
+}
+
+.my-bg-light {
+    background-color: var(--my-light);
+}
+
+.my-text-color-ligth {
+    color: var(--my-light);
+}
+
+.my-bg-primary {
+    background-color: var(--my-primary);
+    color: var(--my-light);
+}
+
+.my-btn-primary {
+    background-color: var(--my-primary);
+    color: var(--my-light);
+}
+
+.my-btn-primary:hover {
+    background-color: var(--my-soft);
+    color: var(--my-primary);
+    border-color: var(--my-primary);
+}
+
+.my-btn-danger {
+    background-color: var(--my-red);
+    color: var(--my-light);
+}
+
+.my-btn-danger:hover {
+    background-color: var(--my-soft);
+    color: var(--my-red);
+    border-color: var(--my-red);
+}
+
+body {
+    background-color: var(--my-light);
+}
+
+.container-fluid {
+    background-color: var(--my-primary);
+}
+
+.navbar-brand {
+    color: var(--my-soft);
+}
+
+.nav-link {
+    color: var(--my-soft);
+}
+
+.collapsed {
+    color: var(--my-soft);
+}
+
+.table>:not(caption)>*>* {
+    background-color: var(--my-soft);
+}
+
+.table-home td:nth-child(2) {
+    color: var(--my-green);
+}
+
+.table-home td:nth-child(3) {
+    color: var(--my-red);
+}
+
+.card {
+    background-color: var(--my-soft);
+}
+
+.table-recebimentos td:nth-child(2) {
+    color: var(--my-green);
+}
+
+.table-gastos td:nth-child(2) {
+    color: var(--my-red);
+}
+
+footer a {
+    text-decoration: none;
+}
